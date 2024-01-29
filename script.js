@@ -66,3 +66,14 @@ function displayResult(stationInfo) {
                                <p>Comes Under: ${stationInfo.betweenStations}</p>
                                <p>DEN: ${stationInfo.den}</p>`;
 }
+
+
+
+// Add event listener for the "keyup" event on the input field
+document.getElementById('stationInput').addEventListener('keyup', function(event) {
+    // Check if the key pressed is Enter (key code 13)
+    if (event.key === 'Enter') {
+        // Trigger the search function
+        searchStation();
+    }
+});
