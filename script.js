@@ -12,6 +12,12 @@ const stationData = [
         route: 'Route 1',
         betweenStations: 'Station XYZ to Station ABC'
     },
+        {
+        code: 'BRGT',
+        name: 'BHERA GHAT',
+        route: 'JBP-ET',
+        betweenStations: 'DEN(S)'
+    },
     // Add more stations as needed
 ];
 
