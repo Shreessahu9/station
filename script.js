@@ -8,15 +8,22 @@ const stationData = [
         den: 'DEN(S)'
     },
     {
-        code: 'XYZ',
-        name: 'Station XYZ',
-        route: 'Route 1',
+        code: 'BHTN',
+        name: 'BHITONI',
+        route: 'JBP -ET',
         betweenStations: 'West Central Railway',
         den: 'DEN(S)'
     },
         {
         code: 'BRGT',
         name: 'BHERA GHAT',
+        route: 'JBP-ET',
+        betweenStations: 'West Central Railway',
+        den: 'DEN(S)'
+    },
+         {
+        code: 'SRID',
+        name: 'SRIDHAM',
         route: 'JBP-ET',
         betweenStations: 'West Central Railway',
         den: 'DEN(S)'
