@@ -4,19 +4,22 @@ const stationData = [
         code: 'ABC',
         name: 'Station ABC',
         route: 'Route 1',
-        betweenStations: 'Station ABC to Station XYZ'
+        betweenStations: 'West Central Railway',
+        den: 'DEN(S)'
     },
     {
         code: 'XYZ',
         name: 'Station XYZ',
         route: 'Route 1',
-        betweenStations: 'Station XYZ to Station ABC'
+        betweenStations: 'West Central Railway',
+        den: 'DEN(S)'
     },
         {
         code: 'BRGT',
         name: 'BHERA GHAT',
         route: 'JBP-ET',
-        betweenStations: 'DEN(S)'
+        betweenStations: 'West Central Railway',
+        den: 'DEN(S)'
     },
     // Add more stations as needed
 ];
@@ -43,7 +46,7 @@ function getStationInfo(stationInput) {
     );
 
     // Return the result or handle the case where no station is found
-    return result || { name: 'Not Found', route: 'N/A', betweenStations: 'N/A' };
+    return result || { name: 'Not Found', route: 'N/A', betweenStations: 'N/A', den: 'N/A' };
 }
 
 function displayResult(stationInfo) {
@@ -53,5 +56,6 @@ function displayResult(stationInfo) {
     // Format and display the station information
     resultSection.innerHTML = `<h2>${stationInfo.name}</h2>
                                <p>Route: ${stationInfo.route}</p>
-                               <p>Information between stations: ${stationInfo.betweenStations}</p>`;
+                               <p>Comes Under: ${stationInfo.betweenStations}</p>
+                               <p>DEN: ${stationInfo.den}</p>`;
 }
