@@ -46,4 +46,6 @@ function displayResult(stationInfo) {
 
     // Format and display the station information
     resultSection.innerHTML = `<h2>${stationInfo.name}</h2>
-                               <p
+                               <p>Route: ${stationInfo.route}</p>
+                               <p>Information between stations: ${stationInfo.betweenStations}</p>`;
+}
