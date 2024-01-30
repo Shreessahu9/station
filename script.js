@@ -899,7 +899,7 @@ function getStationInfo(stationInput) {
     );
 
     // Return the result or handle the case where no station is found
-    return result || { name: 'Not Found', route: 'N/A', betweenStations: 'N/A', den: 'N/A' };
+    return result || { name: 'Not Found', code: 'N/A', route: 'N/A', betweenStations: 'N/A', den: 'N/A' };
 }
 
 function displayResult(stationInfo) {
@@ -908,6 +908,7 @@ function displayResult(stationInfo) {
 
     // Format and display the station information
     resultSection.innerHTML = `<h2>${stationInfo.name}</h2>
+                               <p>Route: ${stationInfo.code}</p>
                                <p>Route: ${stationInfo.route}</p>
                                <p>Comes Under: ${stationInfo.betweenStations}</p>
                                <p>DEN: ${stationInfo.den}</p>`;
