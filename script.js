@@ -908,7 +908,7 @@ function displayResult(stationInfo) {
 
     // Format and display the station information
     resultSection.innerHTML = `<h2>${stationInfo.name}</h2>
-                               <p>Route: ${stationInfo.code}</p>
+                               <p>Station Code: ${stationInfo.code}</p>
                                <p>Route: ${stationInfo.route}</p>
                                <p>Comes Under: ${stationInfo.betweenStations}</p>
                                <p>DEN: ${stationInfo.den}</p>`;
