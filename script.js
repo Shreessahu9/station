@@ -241,7 +241,7 @@ const stationData = [
   "betweenStations": "West Central Railway"
  },
  {
-  "code": "LGLE",
+  "code": "LGCE",
   "name": "LAGARGAWAN",
   "route": "KTE-MKP",
   "den": "DEN(N)",
