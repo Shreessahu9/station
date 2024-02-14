@@ -1119,7 +1119,7 @@ function displayResult(stationInfo) {
     resultSection.innerHTML = `<h2>${stationInfo.name}</h2>
                                <p>Station Code: ${stationInfo.code}</p>
                                <p>Route: ${stationInfo.route}</p>
-                               <p>Route: ${stationInfo.nextstation}</p>
+                               <p>Next Station : ${stationInfo.nextstation}</p>
                                <p>ADEN: ${stationInfo.aden}</p>
                                <p>DEN: ${stationInfo.den}</p>
                                <p>Comes Under: ${stationInfo.betweenStations}</p>`;
