@@ -1086,59 +1086,34 @@ const stationData = [
     // Add more stations as needed
 ];
 
-function searchStation() {
-    // Get the user input
-    const userInput = document.getElementById('stationInput').value;
+function displayResult(stationInfo) {
+    // Display the result in the result section
+    const resultSection = document.getElementById('result');
 
-    // Perform a case-insensitive search for suggestions
-    const suggestions = getSuggestions(userInput);
+    // Create a table element
+    const table = document.createElement('table');
+    table.classList.add('station-table'); // Add a class for styling
 
-    // Display the suggestions
-    displaySuggestions(suggestions);
+    // Create table rows and cells for each property
+    const properties = ['name', 'code', 'route', 'nextstation', 'aden', 'den', 'betweenStations'];
 
-    // Perform a case-insensitive search for the selected suggestion
-    const stationInfo = getStationInfo(userInput);
+    properties.forEach(property => {
+        const row = table.insertRow();
+        const cell1 = row.insertCell(0);
+        const cell2 = row.insertCell(1);
 
-    // Display the result
-    displayResult(stationInfo);
-}
-
-function getSuggestions(input) {
-    // Convert the input to lowercase for case-insensitive comparison
-    const lowerCaseInput = input.toLowerCase();
-
-    // Filter stationData based on input
-    const filteredStations = stationData.filter(station => 
-        station.code.toLowerCase().includes(lowerCaseInput) || 
-        station.name.toLowerCase().includes(lowerCaseInput)
-    );
-
-    // Limit the number of suggestions to 3
-    return filteredStations.slice(0, 3);
-}
-
-function displaySuggestions(suggestions) {
-    // Display the suggestions in the suggestion section
-    const suggestionSection = document.getElementById('suggestions');
-
-    // Create a list element
-    const list = document.createElement('ul');
-
-    // Add each suggestion as a list item
-    suggestions.forEach(suggestion => {
-        const listItem = document.createElement('li');
-        listItem.textContent = suggestion.name;
-        listItem.addEventListener('click', function() {
-            // When a suggestion is clicked, populate the input and trigger the search
-            document.getElementById('stationInput').value = suggestion.name;
-            searchStation();
-        });
-        list.appendChild(listItem);
+        cell1.textContent = formatPropertyName(property);
+        cell2.textContent = stationInfo[property];
     });
 
-    // Update the suggestion section
-    suggestionSection.innerHTML = '';
-    suggestionSection.appendChild(list);
+    // Append the table to the result section
+    resultSection.innerHTML = '';
+    resultSection.appendChild(table);
+}
+
+// Helper function to format property names (e.g., "nextstation" to "Next Station")
+function formatPropertyName(propertyName) {
+    return propertyName.charAt(0).toUpperCase() + propertyName.slice(1).replace(/([A-Z])/g, ' $1');
 }
 
 // ... (the rest of your code remains the same)
