@@ -1086,31 +1086,52 @@ const stationData = [
     // Add more stations as needed
 ];
 
+function searchStation() {
+    // Get the user input
+    const userInput = document.getElementById('stationInput').value;
+
+    // Perform a case-insensitive search
+    const stationInfo = getStationInfo(userInput);
+
+    // Display the result
+    displayResult(stationInfo);
+}
+
+function getStationInfo(stationInput) {
+    // Convert the input to lowercase for case-insensitive comparison
+    const lowerCaseInput = stationInput.toLowerCase();
+
+    // Perform a case-insensitive search in the stationData array
+    const result = stationData.find(station => 
+        station.code.toLowerCase() === lowerCaseInput || 
+        station.name.toLowerCase() === lowerCaseInput
+    );
+
+    // Return the result or handle the case where no station is found
+    return result || { name: 'Not Found', code: 'N/A', route: 'N/A', betweenStations: 'N/A', nextstation: 'N/A', aden: 'N/A', den: 'N/A' };
+}
+
 function displayResult(stationInfo) {
     // Display the result in the result section
     const resultSection = document.getElementById('result');
 
-    // Create a table element
-    const table = document.createElement('table');
-
-    // Create table rows and cells for each property
-    const properties = ['name', 'code', 'route', 'nextstation', 'aden', 'den', 'betweenStations'];
-
-    properties.forEach(property => {
-        const row = table.insertRow();
-        const cell1 = row.insertCell(0);
-        const cell2 = row.insertCell(1);
-
-        cell1.textContent = formatPropertyName(property);
-        cell2.textContent = stationInfo[property];
-    });
-
-    // Append the table to the result section
-    resultSection.innerHTML = '';
-    resultSection.appendChild(table);
+    // Format and display the station information
+    resultSection.innerHTML = `<h2>${stationInfo.name}</h2>
+                               <p>Station Code: ${stationInfo.code}</p>
+                               <p>Route: ${stationInfo.route}</p>
+                               <p>Next Station : ${stationInfo.nextstation}</p>
+                               <p>ADEN: ${stationInfo.aden}</p>
+                               <p>DEN: ${stationInfo.den}</p>
+                               <p>Comes Under: ${stationInfo.betweenStations}</p>`;
 }
 
-// Helper function to format property names (e.g., "nextstation" to "Next Station")
-function formatPropertyName(propertyName) {
-    return propertyName.charAt(0).toUpperCase() + propertyName.slice(1).replace(/([A-Z])/g, ' $1');
-}
+
+
+// Add event listener for the "keyup" event on the input field
+document.getElementById('stationInput').addEventListener('keyup', function(event) {
+    // Check if the key pressed is Enter (key code 13)
+    if (event.key === 'Enter') {
+        // Trigger the search function
+        searchStation();
+    }
+});
