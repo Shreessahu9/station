@@ -1,877 +1,1086 @@
 // Sample data for train stations
 const stationData = [
-    {
-        code: 'ABC',
-        name: 'Station ABC',
-        route: 'Route 1',
-        betweenStations: 'West Central Railway',
-        den: 'DEN(S)'
-    },
-    {
-        code: 'BHTN',
-        name: 'BHITONI',
-        route: 'JBP -ET',
-        betweenStations: 'West Central Railway',
-        den: 'DEN(S)'
-    },
-        {
-        code: 'BRGT',
-        name: 'BHERA GHAT',
-        route: 'JBP-ET',
-        betweenStations: 'West Central Railway',
-        den: 'DEN(S)'
-    },
-         {
-        code: 'SRID',
-        name: 'SRIDHAM',
-        route: 'JBP-ET',
-        betweenStations: 'West Central Railway',
-        den: 'DEN(S)'
-    },
-
-
-{
+    
+ {
   "code": "BRGT",
   "name": "BHERA GHAT",
-  "route": "BRGT -ET ",
+  "nextstation": "BHITONI",
+  "aden": "NU",
+  "route": " BHERA GHAT-ITARSI (BRGT -ET)",
   "den": "DEN(S)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "BHTN",
   "name": "BHITONI",
-  "route": "BRGT -ET ",
+  "nextstation": "BIKRAMPUR",
+  "aden": "NU",
+  "route": " BHERA GHAT-ITARSI (BRGT -ET)",
   "den": "DEN(S)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "BMR",
   "name": "BIKRAMPUR",
-  "route": "BRGT -ET ",
+  "nextstation": "SRIDHAM",
+  "aden": "NU",
+  "route": " BHERA GHAT-ITARSI (BRGT -ET)",
   "den": "DEN(S)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "SRID ",
   "name": "SRIDHAM",
-  "route": "BRGT -ET ",
+  "nextstation": "KARAKBEL",
+  "aden": "NU",
+  "route": " BHERA GHAT-ITARSI (BRGT -ET)",
   "den": "DEN(S)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "KKB ",
   "name": "KARAKBEL",
-  "route": "BRGT -ET ",
+  "nextstation": "BELKHEDA",
+  "aden": "NU",
+  "route": " BHERA GHAT-ITARSI (BRGT -ET)",
   "den": "DEN(S)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "BELD",
   "name": "BELKHEDA",
-  "route": "BRGT -ET ",
+  "nextstation": "GHATPINDARAI",
+  "aden": "NU",
+  "route": " BHERA GHAT-ITARSI (BRGT -ET)",
   "den": "DEN(S)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "GPC ",
   "name": "GHATPINDARAI",
-  "route": "BRGT -ET ",
+  "nextstation": "NARSINGHPUR",
+  "aden": "NU",
+  "route": " BHERA GHAT-ITARSI (BRGT -ET)",
   "den": "DEN(S)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "NU",
   "name": "NARSINGHPUR",
-  "route": "BRGT -ET ",
+  "nextstation": "KARELI",
+  "aden": "NU",
+  "route": " BHERA GHAT-ITARSI (BRGT -ET)",
   "den": "DEN(S)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "KY",
   "name": "KARELI",
-  "route": "BRGT -ET ",
+  "nextstation": "KARAPGAON",
+  "aden": "NU",
+  "route": " BHERA GHAT-ITARSI (BRGT -ET)",
   "den": "DEN(S)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "KBN",
   "name": "KARAPGAON",
-  "route": "BRGT -ET ",
+  "nextstation": "BOHANI",
+  "aden": "NU",
+  "route": " BHERA GHAT-ITARSI (BRGT -ET)",
   "den": "DEN(S)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "BNE",
   "name": "BOHANI",
-  "route": "BRGT -ET ",
+  "nextstation": "GADARWARA",
+  "aden": "NU",
+  "route": " BHERA GHAT-ITARSI (BRGT -ET)",
   "den": "DEN(S)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "GAR",
   "name": "GADARWARA",
-  "route": "BRGT -ET ",
+  "nextstation": "SALICHOUKA RD",
+  "aden": "PPI",
+  "route": " BHERA GHAT-ITARSI (BRGT -ET)",
   "den": "DEN(S)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "SCKR",
   "name": "SALICHOUKA RD",
-  "route": "BRGT -ET ",
+  "nextstation": "JUNEHTA",
+  "aden": "PPI",
+  "route": " BHERA GHAT-ITARSI (BRGT -ET)",
   "den": "DEN(S)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "JHT",
   "name": "JUNEHTA",
-  "route": "BRGT -ET ",
+  "nextstation": "BANKHEDI",
+  "aden": "PPI",
+  "route": " BHERA GHAT-ITARSI (BRGT -ET)",
   "den": "DEN(S)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "BKH",
   "name": "BANKHEDI",
-  "route": "BRGT -ET ",
+  "nextstation": "PIPARIYA",
+  "aden": "PPI",
+  "route": " BHERA GHAT-ITARSI (BRGT -ET)",
   "den": "DEN(S)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "PPI",
   "name": "PIPARIYA",
-  "route": "BRGT -ET ",
+  "nextstation": "SUHAGPUR",
+  "aden": "PPI",
+  "route": " BHERA GHAT-ITARSI (BRGT -ET)",
   "den": "DEN(S)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "SGP",
   "name": "SUHAGPUR",
-  "route": "BRGT -ET ",
+  "nextstation": "GURAMKHEDI",
+  "aden": "PPI",
+  "route": " BHERA GHAT-ITARSI (BRGT -ET)",
   "den": "DEN(S)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "GMD",
   "name": "GURAMKHEDI",
-  "route": "BRGT -ET ",
+  "nextstation": "BAGRATAWA",
+  "aden": "PPI",
+  "route": " BHERA GHAT-ITARSI (BRGT -ET)",
   "den": "DEN(S)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "BGTA",
   "name": "BAGRATAWA",
-  "route": "BRGT -ET ",
+  "nextstation": "SONTALALI",
+  "aden": "PPI",
+  "route": " BHERA GHAT-ITARSI (BRGT -ET)",
   "den": "DEN(S)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "SQL",
   "name": "SONTALALI",
-  "route": "BRGT -ET ",
+  "nextstation": "GURRA",
+  "aden": "PPI",
+  "route": " BHERA GHAT-ITARSI (BRGT -ET)",
   "den": "DEN(S)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "GRO",
   "name": "GURRA",
-  "route": "BRGT -ET ",
+  "nextstation": "ITARSI",
+  "aden": "PPI",
+  "route": " BHERA GHAT-ITARSI (BRGT -ET)",
   "den": "DEN(S)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "ET",
   "name": "ITARSI",
-  "route": "BRGT -ET ",
+  "nextstation": "-",
+  "aden": "PPI",
+  "route": " BHERA GHAT-ITARSI (BRGT -ET)",
   "den": "DEN(S)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "KTE",
   "name": "KATNI JN.",
-  "route": "KTE-MKP",
+  "nextstation": "PATWARA",
+  "aden": "STA\/S",
+  "route": "KATNI -MANIKPUR  (KTE-MKP)",
   "den": "DEN(N)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "PTWA",
   "name": "PATWARA",
-  "route": "KTE-MKP",
+  "nextstation": "JUKEHI",
+  "aden": "STA\/S",
+  "route": "KATNI -MANIKPUR  (KTE-MKP)",
   "den": "DEN(N)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "JKE",
   "name": "JUKEHI",
-  "route": "KTE-MKP",
+  "nextstation": "PAKARIA ROAD ",
+  "aden": "STA\/S",
+  "route": "KATNI -MANIKPUR  (KTE-MKP)",
   "den": "DEN(N)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "PKRD",
   "name": "PAKARIA ROAD ",
-  "route": "KTE-MKP",
+  "nextstation": "AMDARA",
+  "aden": "STA\/S",
+  "route": "KATNI -MANIKPUR  (KTE-MKP)",
   "den": "DEN(N)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "UDR",
   "name": "AMDARA",
-  "route": "KTE-MKP",
+  "nextstation": "BHADANPUR",
+  "aden": "STA\/S",
+  "route": "KATNI -MANIKPUR  (KTE-MKP)",
   "den": "DEN(N)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "BUU",
   "name": "BHADANPUR",
-  "route": "KTE-MKP",
+  "nextstation": "MAIHAR",
+  "aden": "STA\/S",
+  "route": "KATNI -MANIKPUR  (KTE-MKP)",
   "den": "DEN(N)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "MYR",
   "name": "MAIHAR",
-  "route": "KTE-MKP",
+  "nextstation": "UNCHHERA",
+  "aden": "STA\/S",
+  "route": "KATNI -MANIKPUR  (KTE-MKP)",
   "den": "DEN(N)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "UHR",
   "name": "UNCHHERA",
-  "route": "KTE-MKP",
+  "nextstation": "LAGARGAWAN",
+  "aden": "STA\/S",
+  "route": "KATNI -MANIKPUR  (KTE-MKP)",
   "den": "DEN(N)",
   "betweenStations": "West Central Railway"
  },
  {
-  "code": "LGCE",
+  "code": "LGLE",
   "name": "LAGARGAWAN",
-  "route": "KTE-MKP",
+  "nextstation": "SATANA JN.",
+  "aden": "STA\/S",
+  "route": "KATNI -MANIKPUR  (KTE-MKP)",
   "den": "DEN(N)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "STA",
   "name": "SATANA JN.",
-  "route": "KTE-MKP",
+  "nextstation": "SAGMA ",
+  "aden": "STA\/N",
+  "route": "KATNI -MANIKPUR  (KTE-MKP)",
   "den": "DEN(N)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "SAGM ",
   "name": "SAGMA ",
-  "route": "KTE-MKP",
+  "nextstation": "HATI ",
+  "aden": "STA\/N",
+  "route": "KATNI -MANIKPUR  (KTE-MKP)",
   "den": "DEN(N)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "HATI",
   "name": "HATI ",
-  "route": "KTE-MKP",
+  "nextstation": "JAITWARA",
+  "aden": "STA\/N",
+  "route": "KATNI -MANIKPUR  (KTE-MKP)",
   "den": "DEN(N)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "JTW",
   "name": "JAITWARA",
-  "route": "KTE-MKP",
+  "nextstation": "KHUTAHA ",
+  "aden": "STA\/N",
+  "route": "KATNI -MANIKPUR  (KTE-MKP)",
   "den": "DEN(N)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "KTHA",
   "name": "KHUTAHA ",
-  "route": "KTE-MKP",
+  "nextstation": "CHITAHARA ",
+  "aden": "STA\/N",
+  "route": "KATNI -MANIKPUR  (KTE-MKP)",
   "den": "DEN(N)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "CTHR",
   "name": "CHITAHARA ",
-  "route": "KTE-MKP",
+  "nextstation": "MAJHAGAWAN",
+  "aden": "STA\/N",
+  "route": "KATNI -MANIKPUR  (KTE-MKP)",
   "den": "DEN(N)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "MJG",
   "name": "MAJHAGAWAN",
-  "route": "KTE-MKP",
+  "nextstation": "TIKARIA",
+  "aden": "STA\/N",
+  "route": "KATNI -MANIKPUR  (KTE-MKP)",
   "den": "DEN(N)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "TKYR",
   "name": "TIKARIA",
-  "route": "KTE-MKP",
+  "nextstation": "MARKUNDI",
+  "aden": "STA\/N",
+  "route": "KATNI -MANIKPUR  (KTE-MKP)",
   "den": "DEN(N)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "MKD",
   "name": "MARKUNDI",
-  "route": "KTE-MKP",
+  "nextstation": "BARAHA MUFI",
+  "aden": "STA\/N",
+  "route": "KATNI -MANIKPUR  (KTE-MKP)",
   "den": "DEN(N)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "BQF",
   "name": "BARAHA MUFI",
-  "route": "KTE-MKP",
+  "nextstation": "BANSAPHAR",
+  "aden": "STA\/N",
+  "route": "KATNI -MANIKPUR  (KTE-MKP)",
   "den": "DEN(N)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "BNPR",
   "name": "BANSAPHAR",
-  "route": "KTE-MKP",
+  "nextstation": "MANIKPUR",
+  "aden": "STA\/N",
+  "route": "KATNI -MANIKPUR  (KTE-MKP)",
   "den": "DEN(N)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "MKP",
   "name": "MANIKPUR",
-  "route": "KTE-MKP",
+  "nextstation": "-",
+  "aden": "STA\/N",
+  "route": "KATNI -MANIKPUR  (KTE-MKP)",
   "den": "DEN(N)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "STA",
   "name": "SATANA JN.",
-  "route": "STA - REW",
+  "nextstation": "KAIMA",
+  "aden": "STA\/N",
+  "route": "SATANA-REWA (STA - REW)",
   "den": "DEN(N)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "KMA",
   "name": "KAIMA",
-  "route": "STA - REW",
+  "nextstation": "SAKARIYA",
+  "aden": "STA\/N",
+  "route": "SATANA-REWA (STA - REW)",
   "den": "DEN(N)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "SKAR",
   "name": "SAKARIYA",
-  "route": "STA - REW",
+  "nextstation": "HINAUTA RAMBAN",
+  "aden": "STA\/N",
+  "route": "SATANA-REWA (STA - REW)",
   "den": "DEN(N)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "HNM",
   "name": "HINAUTA RAMBAN",
-  "route": "STA - REW",
+  "nextstation": "BAGHAI RD",
+  "aden": "STA\/N",
+  "route": "SATANA-REWA (STA - REW)",
   "den": "DEN(N)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "BGHI",
   "name": "BAGHAI RD",
-  "route": "STA - REW",
+  "nextstation": "TRUKI RD",
+  "aden": "STA\/N",
+  "route": "SATANA-REWA (STA - REW)",
   "den": "DEN(N)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "TZR",
   "name": "TRUKI RD",
-  "route": "STA - REW",
+  "nextstation": "REWA",
+  "aden": "STA\/N",
+  "route": "SATANA-REWA (STA - REW)",
   "den": "DEN(N)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "REW",
   "name": "REWA",
-  "route": "STA - REW",
+  "nextstation": "-",
+  "aden": "STA\/N",
+  "route": "SATANA-REWA (STA - REW)",
   "den": "DEN(N)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "KEQ",
   "name": "KACHHAPURA",
-  "route": "KEQ-BQQ",
+  "nextstation": "MADAN MAHAL",
+  "aden": "JBP\/S",
+  "route": "(KACHHAPURA-BAKHLETA) KEQ-BQQ",
   "den": "DEN(C)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "MML",
   "name": "MADAN MAHAL",
-  "route": "KEQ-BQQ",
+  "nextstation": "JABALPUR JN.",
+  "aden": "JBP\/S",
+  "route": "(KACHHAPURA-BAKHLETA) KEQ-BQQ",
   "den": "DEN(C)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "JBP",
   "name": "JABALPUR JN.",
-  "route": "KEQ-BQQ",
+  "nextstation": "ADHARTAL ",
+  "aden": "JBP\/S",
+  "route": "(KACHHAPURA-BAKHLETA) KEQ-BQQ",
   "den": "DEN(C)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "ADTL",
   "name": "ADHARTAL ",
-  "route": "KEQ-BQQ",
+  "nextstation": "DEORI",
+  "aden": "JBP\/S",
+  "route": "(KACHHAPURA-BAKHLETA) KEQ-BQQ",
   "den": "DEN(C)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "DOE",
   "name": "DEORI",
-  "route": "KEQ-BQQ",
+  "nextstation": "GOSALAPUR",
+  "aden": "JBP\/S",
+  "route": "(KACHHAPURA-BAKHLETA) KEQ-BQQ",
   "den": "DEN(C)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "GSPR",
   "name": "GOSALAPUR",
-  "route": "KEQ-BQQ",
+  "nextstation": "SIHORA ROAD",
+  "aden": "JBP\/S",
+  "route": "(KACHHAPURA-BAKHLETA) KEQ-BQQ",
   "den": "DEN(C)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "SHR",
   "name": "SIHORA ROAD",
-  "route": "KEQ-BQQ",
+  "nextstation": "DUNDI",
+  "aden": "JBP\/S",
+  "route": "(KACHHAPURA-BAKHLETA) KEQ-BQQ",
   "den": "DEN(C)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "DDCE",
   "name": "DUNDI",
-  "route": "KEQ-BQQ",
+  "nextstation": "SLEEMANABAD RD",
+  "aden": "JBP\/S",
+  "route": "(KACHHAPURA-BAKHLETA) KEQ-BQQ",
   "den": "DEN(C)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "SBD",
   "name": "SLEEMANABAD RD",
-  "route": "KEQ-BQQ",
+  "nextstation": "SANSARPUR ",
+  "aden": "KTE",
+  "route": "(KACHHAPURA-BAKHLETA) KEQ-BQQ",
   "den": "DEN(C)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "SNRR",
   "name": "SANSARPUR ",
-  "route": "KEQ-BQQ",
+  "nextstation": "NIWAR ",
+  "aden": "KTE",
+  "route": "(KACHHAPURA-BAKHLETA) KEQ-BQQ",
   "den": "DEN(C)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "NWR",
   "name": "NIWAR ",
-  "route": "KEQ-BQQ",
+  "nextstation": "MADHAVNAGAR RD",
+  "aden": "KTE",
+  "route": "(KACHHAPURA-BAKHLETA) KEQ-BQQ",
   "den": "DEN(C)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "MDRR",
   "name": "MADHAVNAGAR RD",
-  "route": "KEQ-BQQ",
+  "nextstation": "KATNI SOUTH",
+  "aden": "KTE",
+  "route": "(KACHHAPURA-BAKHLETA) KEQ-BQQ",
   "den": "DEN(C)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "KTES",
   "name": "KATNI SOUTH",
-  "route": "KEQ-BQQ",
+  "nextstation": "KATNI MURWARA",
+  "aden": "KTE",
+  "route": "(KACHHAPURA-BAKHLETA) KEQ-BQQ",
   "den": "DEN(C)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "KMZ",
   "name": "KATNI MURWARA",
-  "route": "KEQ-BQQ",
+  "nextstation": "NEW KATNI JN.",
+  "aden": "KTE",
+  "route": "(KACHHAPURA-BAKHLETA) KEQ-BQQ",
   "den": "DEN(C)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "NKJ",
   "name": "NEW KATNI JN.",
-  "route": "KEQ-BQQ",
+  "nextstation": "MAJHAGAWAN PHATAK",
+  "aden": "KTE",
+  "route": "(KACHHAPURA-BAKHLETA) KEQ-BQQ",
   "den": "DEN(C)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "MJGP",
   "name": "MAJHAGAWAN PHATAK",
-  "route": "KEQ-BQQ",
+  "nextstation": "HARDUA ",
+  "aden": "KTE",
+  "route": "(KACHHAPURA-BAKHLETA) KEQ-BQQ",
   "den": "DEN(C)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "HDU",
   "name": "HARDUA ",
-  "route": "KEQ-BQQ",
+  "nextstation": "PATOHAN",
+  "aden": "KTE",
+  "route": "(KACHHAPURA-BAKHLETA) KEQ-BQQ",
   "den": "DEN(C)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "PTHD",
   "name": "PATOHAN",
-  "route": "KEQ-BQQ",
+  "nextstation": "RITHI",
+  "aden": "KTE",
+  "route": "(KACHHAPURA-BAKHLETA) KEQ-BQQ",
   "den": "DEN(C)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "REI",
   "name": "RITHI",
-  "route": "KEQ-BQQ",
+  "nextstation": "BAKHLETA ",
+  "aden": "KTE",
+  "route": "(KACHHAPURA-BAKHLETA) KEQ-BQQ",
   "den": "DEN(C)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "BQQ",
   "name": "BAKHLETA ",
-  "route": "KEQ-BQQ",
+  "nextstation": "-",
+  "aden": "DMO",
+  "route": "(KACHHAPURA-BAKHLETA) KEQ-BQQ",
   "den": "DEN(C)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "KTKD",
   "name": "KATANGI KHURD",
-  "route": "KTKD-SGRL",
+  "nextstation": "SALHANA",
+  "aden": "BEHR",
+  "route": "KATANGI KHURD-SINGRAULI (KTKD-SGRL)",
   "den": "DEN(E)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "SLHA",
   "name": "SALHANA",
-  "route": "KTKD-SGRL",
+  "nextstation": "PIPARIYAKALAN",
+  "aden": "BEHR",
+  "route": "KATANGI KHURD-SINGRAULI (KTKD-SGRL)",
   "den": "DEN(E)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "PWK",
   "name": "PIPARIYAKALAN",
-  "route": "KTKD-SGRL",
+  "nextstation": "KHANNA BANJARI",
+  "aden": "BEHR",
+  "route": "KATANGI KHURD-SINGRAULI (KTKD-SGRL)",
   "den": "DEN(E)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "KHBJ",
   "name": "KHANNA BANJARI",
-  "route": "KTKD-SGRL",
+  "nextstation": "MAHROI ",
+  "aden": "BEHR",
+  "route": "KATANGI KHURD-SINGRAULI (KTKD-SGRL)",
   "den": "DEN(E)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "MFQ",
   "name": "MAHROI ",
-  "route": "KTKD-SGRL",
+  "nextstation": "DAMOY",
+  "aden": "BEHR",
+  "route": "KATANGI KHURD-SINGRAULI (KTKD-SGRL)",
   "den": "DEN(E)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "DMYA",
   "name": "DAMOY",
-  "route": "KTKD-SGRL",
+  "nextstation": "VIJAYSOTA",
+  "aden": "BEHR",
+  "route": "KATANGI KHURD-SINGRAULI (KTKD-SGRL)",
   "den": "DEN(E)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "VST",
   "name": "VIJAYSOTA",
-  "route": "KTKD-SGRL",
+  "nextstation": "CHHATENI",
+  "aden": "BEHR",
+  "route": "KATANGI KHURD-SINGRAULI (KTKD-SGRL)",
   "den": "DEN(E)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "CTJ",
   "name": "CHHATENI",
-  "route": "KTKD-SGRL",
+  "nextstation": "BEOHARI",
+  "aden": "BEHR",
+  "route": "KATANGI KHURD-SINGRAULI (KTKD-SGRL)",
   "den": "DEN(E)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "BEHR",
   "name": "BEOHARI",
-  "route": "KTKD-SGRL",
+  "nextstation": "DURBRIKALAN",
+  "aden": "BEHR",
+  "route": "KATANGI KHURD-SINGRAULI (KTKD-SGRL)",
   "den": "DEN(E)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "BARD",
   "name": "DURBRIKALAN",
-  "route": "KTKD-SGRL",
+  "nextstation": "KANCHANPUR RD",
+  "aden": "BEHR",
+  "route": "KATANGI KHURD-SINGRAULI (KTKD-SGRL)",
   "den": "DEN(E)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "CNC",
   "name": "KANCHANPUR RD",
-  "route": "KTKD-SGRL",
+  "nextstation": "JOBA",
+  "aden": "BEHR",
+  "route": "KATANGI KHURD-SINGRAULI (KTKD-SGRL)",
   "den": "DEN(E)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "JOBA",
   "name": "JOBA",
-  "route": "KTKD-SGRL",
+  "nextstation": "MARWASGRAM",
+  "aden": "BEHR",
+  "route": "KATANGI KHURD-SINGRAULI (KTKD-SGRL)",
   "den": "DEN(E)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "MWJ",
   "name": "MARWASGRAM",
-  "route": "KTKD-SGRL",
+  "nextstation": "SHANKARPUR  \nBHANDOURA",
+  "aden": "BEHR",
+  "route": "KATANGI KHURD-SINGRAULI (KTKD-SGRL)",
   "den": "DEN(E)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "SKBR",
   "name": "SHANKARPUR  \nBHANDOURA",
-  "route": "KTKD-SGRL",
+  "nextstation": "NIWAS RD",
+  "aden": "BEHR",
+  "route": "KATANGI KHURD-SINGRAULI (KTKD-SGRL)",
   "den": "DEN(E)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "NWB",
   "name": "NIWAS RD",
-  "route": "KTKD-SGRL",
+  "nextstation": "BHARSENDI",
+  "aden": "BEHR",
+  "route": "KATANGI KHURD-SINGRAULI (KTKD-SGRL)",
   "den": "DEN(E)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "BSDL",
   "name": "BHARSENDI",
-  "route": "KTKD-SGRL",
+  "nextstation": "SURASARAIGHAT  \nJHARA",
+  "aden": "BEHR",
+  "route": "KATANGI KHURD-SINGRAULI (KTKD-SGRL)",
   "den": "DEN(E)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "SSGJ",
   "name": "SURASARAIGHAT  \nJHARA",
-  "route": "KTKD-SGRL",
+  "nextstation": "SARAIGRAM",
+  "aden": "BEHR",
+  "route": "KATANGI KHURD-SINGRAULI (KTKD-SGRL)",
   "den": "DEN(E)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "SGAM",
   "name": "SARAIGRAM",
-  "route": "KTKD-SGRL",
+  "nextstation": "GAJARA BAHRA",
+  "aden": "BEHR",
+  "route": "KATANGI KHURD-SINGRAULI (KTKD-SGRL)",
   "den": "DEN(E)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "GAJB",
   "name": "GAJARA BAHRA",
-  "route": "KTKD-SGRL",
+  "nextstation": "DEORAGRAM",
+  "aden": "BEHR",
+  "route": "KATANGI KHURD-SINGRAULI (KTKD-SGRL)",
   "den": "DEN(E)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "DRGM",
   "name": "DEORAGRAM",
-  "route": "KTKD-SGRL",
+  "nextstation": "MAJHOLI ",
+  "aden": "BEHR",
+  "route": "KATANGI KHURD-SINGRAULI (KTKD-SGRL)",
   "den": "DEN(E)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "MZHL",
   "name": "MAJHOLI ",
-  "route": "KTKD-SGRL",
+  "nextstation": "BARGAWAN",
+  "aden": "BEHR",
+  "route": "KATANGI KHURD-SINGRAULI (KTKD-SGRL)",
   "den": "DEN(E)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "BRGW",
   "name": "BARGAWAN",
-  "route": "KTKD-SGRL",
+  "nextstation": "GONDAWALI",
+  "aden": "BEHR",
+  "route": "KATANGI KHURD-SINGRAULI (KTKD-SGRL)",
   "den": "DEN(E)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "GNDI",
   "name": "GONDAWALI",
-  "route": "KTKD-SGRL",
+  "nextstation": "MAHDEIYA",
+  "aden": "BEHR",
+  "route": "KATANGI KHURD-SINGRAULI (KTKD-SGRL)",
   "den": "DEN(E)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "MHDA",
   "name": "MAHDEIYA",
-  "route": "KTKD-SGRL",
+  "nextstation": "SINGRAULI",
+  "aden": "BEHR",
+  "route": "KATANGI KHURD-SINGRAULI (KTKD-SGRL)",
   "den": "DEN(E)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "SGRL",
   "name": "SINGRAULI",
-  "route": "KTKD-SGRL",
+  "nextstation": "-",
+  "aden": "KTE",
+  "route": "KATANGI KHURD-SINGRAULI (KTKD-SGRL)",
   "den": "DEN(E)",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "SYA",
   "name": "SALAIA",
-  "route": "SYA-BINA",
+  "nextstation": "RATANGAON",
+  "aden": "DMO",
+  "route": "SALAIA-BINA (SYA-BINA)",
   "den": "DEN(W)    ",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "RTGN",
   "name": "RATANGAON",
-  "route": "SYA-BINA",
+  "nextstation": "SAGONI",
+  "aden": "DMO",
+  "route": "SALAIA-BINA (SYA-BINA)",
   "den": "DEN(W)    ",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "SAO",
   "name": "SAGONI",
-  "route": "SYA-BINA",
+  "nextstation": "GOLAPATTI",
+  "aden": "DMO",
+  "route": "SALAIA-BINA (SYA-BINA)",
   "den": "DEN(W)    ",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "GTY",
   "name": "GOLAPATTI",
-  "route": "SYA-BINA",
+  "nextstation": "GHATERA",
+  "aden": "DMO",
+  "route": "SALAIA-BINA (SYA-BINA)",
   "den": "DEN(W)    ",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "GEA",
   "name": "GHATERA",
-  "route": "SYA-BINA",
+  "nextstation": "BANDAKPUR",
+  "aden": "DMO",
+  "route": "SALAIA-BINA (SYA-BINA)",
   "den": "DEN(W)    ",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "BNU",
   "name": "BANDAKPUR",
-  "route": "SYA-BINA",
+  "nextstation": "KARHIYA BHADOLI",
+  "aden": "DMO",
+  "route": "SALAIA-BINA (SYA-BINA)",
   "den": "DEN(W)    ",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "KYX",
   "name": "KARHIYA BHADOLI",
-  "route": "SYA-BINA",
+  "nextstation": "DAMOH",
+  "aden": "DMO",
+  "route": "SALAIA-BINA (SYA-BINA)",
   "den": "DEN(W)    ",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "DMO",
   "name": "DAMOH",
-  "route": "SYA-BINA",
+  "nextstation": "ASLANA",
+  "aden": "DMO",
+  "route": "SALAIA-BINA (SYA-BINA)",
   "den": "DEN(W)    ",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "ANA",
   "name": "ASLANA",
-  "route": "SYA-BINA",
+  "nextstation": "PATHARIA",
+  "aden": "DMO",
+  "route": "SALAIA-BINA (SYA-BINA)",
   "den": "DEN(W)    ",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "PHA",
   "name": "PATHARIA",
-  "route": "SYA-BINA",
+  "nextstation": "GANESHGANJ.",
+  "aden": "DMO",
+  "route": "SALAIA-BINA (SYA-BINA)",
   "den": "DEN(W)    ",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "GAJ",
   "name": "GANESHGANJ.",
-  "route": "SYA-BINA",
+  "nextstation": "DANGIDAHAR",
+  "aden": "DMO",
+  "route": "SALAIA-BINA (SYA-BINA)",
   "den": "DEN(W)    ",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "DGD",
   "name": "DANGIDAHAR",
-  "route": "SYA-BINA",
+  "nextstation": "GIRWAR",
+  "aden": "SGO ",
+  "route": "SALAIA-BINA (SYA-BINA)",
   "den": "DEN(W)    ",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "GW",
   "name": "GIRWAR",
-  "route": "SYA-BINA",
+  "nextstation": "LIDHORA KHURD",
+  "aden": "SGO ",
+  "route": "SALAIA-BINA (SYA-BINA)",
   "den": "DEN(W)    ",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "LDA",
   "name": "LIDHORA KHURD",
-  "route": "SYA-BINA",
+  "nextstation": "MAKRONIA",
+  "aden": "SGO ",
+  "route": "SALAIA-BINA (SYA-BINA)",
   "den": "DEN(W)    ",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "MKRN",
   "name": "MAKRONIA",
-  "route": "SYA-BINA",
+  "nextstation": "SAUGOR",
+  "aden": "SGO ",
+  "route": "SALAIA-BINA (SYA-BINA)",
   "den": "DEN(W)    ",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "SGO",
   "name": "SAUGOR",
-  "route": "SYA-BINA",
+  "nextstation": "RATONA",
+  "aden": "SGO ",
+  "route": "SALAIA-BINA (SYA-BINA)",
   "den": "DEN(W)    ",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "RTZ",
   "name": "RATONA",
-  "route": "SYA-BINA",
+  "nextstation": "NARIAOLI",
+  "aden": "SGO ",
+  "route": "SALAIA-BINA (SYA-BINA)",
   "den": "DEN(W)    ",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "NOI",
   "name": "NARIAOLI",
-  "route": "SYA-BINA",
+  "nextstation": "ISARWARA",
+  "aden": "SGO ",
+  "route": "SALAIA-BINA (SYA-BINA)",
   "den": "DEN(W)    ",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "ISH",
   "name": "ISARWARA",
-  "route": "SYA-BINA",
+  "nextstation": "JERUWAKHERA",
+  "aden": "SGO ",
+  "route": "SALAIA-BINA (SYA-BINA)",
   "den": "DEN(W)    ",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "JRK",
   "name": "JERUWAKHERA",
-  "route": "SYA-BINA",
+  "nextstation": "SUMRERI",
+  "aden": "SGO ",
+  "route": "SALAIA-BINA (SYA-BINA)",
   "den": "DEN(W)    ",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "SMRR",
   "name": "SUMRERI",
-  "route": "SYA-BINA",
+  "nextstation": "KHURAI",
+  "aden": "SGO ",
+  "route": "SALAIA-BINA (SYA-BINA)",
   "den": "DEN(W)    ",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "KYE",
   "name": "KHURAI",
-  "route": "SYA-BINA",
+  "nextstation": "BAGHORA",
+  "aden": "SGO ",
+  "route": "SALAIA-BINA (SYA-BINA)",
   "den": "DEN(W)    ",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "BJQ",
   "name": "BAGHORA",
-  "route": "SYA-BINA",
+  "nextstation": "BINA MALKHEDI",
+  "aden": "SGO ",
+  "route": "SALAIA-BINA (SYA-BINA)",
   "den": "DEN(W)    ",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "MAKR",
   "name": "BINA MALKHEDI",
-  "route": "SYA-BINA",
+  "nextstation": "BINA  JN.",
+  "aden": "SGO ",
+  "route": "SALAIA-BINA (SYA-BINA)",
   "den": "DEN(W)    ",
   "betweenStations": "West Central Railway"
  },
  {
   "code": "BINA",
   "name": "BINA  JN.",
-  "route": "SYA-BINA",
+  "nextstation": "-",
+  "aden": "-",
+  "route": "SALAIA-BINA (SYA-BINA)",
   "den": "DEN(W)    ",
   "betweenStations": "West Central Railway"
  }
-
-
 
     
     // Add more stations as needed
@@ -899,7 +1108,7 @@ function getStationInfo(stationInput) {
     );
 
     // Return the result or handle the case where no station is found
-    return result || { name: 'Not Found', code: 'N/A', route: 'N/A', betweenStations: 'N/A', den: 'N/A' };
+    return result || { name: 'Not Found', code: 'N/A', route: 'N/A', betweenStations: 'N/A', nextstation: 'N/A', aden: 'N/A', den: 'N/A' };
 }
 
 function displayResult(stationInfo) {
@@ -910,8 +1119,10 @@ function displayResult(stationInfo) {
     resultSection.innerHTML = `<h2>${stationInfo.name}</h2>
                                <p>Station Code: ${stationInfo.code}</p>
                                <p>Route: ${stationInfo.route}</p>
-                               <p>Comes Under: ${stationInfo.betweenStations}</p>
-                               <p>DEN: ${stationInfo.den}</p>`;
+                               <p>Route: ${stationInfo.nextstation}</p>
+                               <p>ADEN: ${stationInfo.aden}</p>
+                               <p>DEN: ${stationInfo.den}</p>
+                               <p>Comes Under: ${stationInfo.betweenStations}</p>`;
 }
 
 
