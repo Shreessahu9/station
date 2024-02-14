@@ -1092,7 +1092,6 @@ function displayResult(stationInfo) {
 
     // Create a table element
     const table = document.createElement('table');
-    table.classList.add('station-table'); // Add a class for styling
 
     // Create table rows and cells for each property
     const properties = ['name', 'code', 'route', 'nextstation', 'aden', 'den', 'betweenStations'];
