@@ -1115,5 +1115,3 @@ function displayResult(stationInfo) {
 function formatPropertyName(propertyName) {
     return propertyName.charAt(0).toUpperCase() + propertyName.slice(1).replace(/([A-Z])/g, ' $1');
 }
-
-// ... (the rest of your code remains the same)
