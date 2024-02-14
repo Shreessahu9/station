@@ -1090,48 +1090,55 @@ function searchStation() {
     // Get the user input
     const userInput = document.getElementById('stationInput').value;
 
-    // Perform a case-insensitive search
+    // Perform a case-insensitive search for suggestions
+    const suggestions = getSuggestions(userInput);
+
+    // Display the suggestions
+    displaySuggestions(suggestions);
+
+    // Perform a case-insensitive search for the selected suggestion
     const stationInfo = getStationInfo(userInput);
 
     // Display the result
     displayResult(stationInfo);
 }
 
-function getStationInfo(stationInput) {
+function getSuggestions(input) {
     // Convert the input to lowercase for case-insensitive comparison
-    const lowerCaseInput = stationInput.toLowerCase();
+    const lowerCaseInput = input.toLowerCase();
 
-    // Perform a case-insensitive search in the stationData array
-    const result = stationData.find(station => 
-        station.code.toLowerCase() === lowerCaseInput || 
-        station.name.toLowerCase() === lowerCaseInput
+    // Filter stationData based on input
+    const filteredStations = stationData.filter(station => 
+        station.code.toLowerCase().includes(lowerCaseInput) || 
+        station.name.toLowerCase().includes(lowerCaseInput)
     );
 
-    // Return the result or handle the case where no station is found
-    return result || { name: 'Not Found', code: 'N/A', route: 'N/A', betweenStations: 'N/A', nextstation: 'N/A', aden: 'N/A', den: 'N/A' };
+    // Limit the number of suggestions to 3
+    return filteredStations.slice(0, 3);
 }
 
-function displayResult(stationInfo) {
-    // Display the result in the result section
-    const resultSection = document.getElementById('result');
+function displaySuggestions(suggestions) {
+    // Display the suggestions in the suggestion section
+    const suggestionSection = document.getElementById('suggestions');
 
-    // Format and display the station information
-    resultSection.innerHTML = `<h2>${stationInfo.name}</h2>
-                               <p>Station Code: ${stationInfo.code}</p>
-                               <p>Route: ${stationInfo.route}</p>
-                               <p>Next Station : ${stationInfo.nextstation}</p>
-                               <p>ADEN: ${stationInfo.aden}</p>
-                               <p>DEN: ${stationInfo.den}</p>
-                               <p>Comes Under: ${stationInfo.betweenStations}</p>`;
+    // Create a list element
+    const list = document.createElement('ul');
+
+    // Add each suggestion as a list item
+    suggestions.forEach(suggestion => {
+        const listItem = document.createElement('li');
+        listItem.textContent = suggestion.name;
+        listItem.addEventListener('click', function() {
+            // When a suggestion is clicked, populate the input and trigger the search
+            document.getElementById('stationInput').value = suggestion.name;
+            searchStation();
+        });
+        list.appendChild(listItem);
+    });
+
+    // Update the suggestion section
+    suggestionSection.innerHTML = '';
+    suggestionSection.appendChild(list);
 }
 
-
-
-// Add event listener for the "keyup" event on the input field
-document.getElementById('stationInput').addEventListener('keyup', function(event) {
-    // Check if the key pressed is Enter (key code 13)
-    if (event.key === 'Enter') {
-        // Trigger the search function
-        searchStation();
-    }
-});
+// ... (the rest of your code remains the same)
